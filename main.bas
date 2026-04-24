@@ -14,7 +14,7 @@
 12 PRINT "welcome to BasicGPT," + N$
 15 PRINT "Settings: type YES or NO."
 20 INPUT "Enable EMOJI responses? "; EMOJ$
-25 INPUT "Enable CODE blocks? "; CODE$
+25 INPUT "Enable CODE blocks? (This is important for BasicGPT to write a HTML page, if you don't want html, then respond with NO)"; CODE$
 30 IF EMOJ$ = "YES" OR EMOJ$ = "yes" THEN EMOJI = 1 ELSE EMOJI = 0
 35 IF CODE$ = "YES" OR CODE$ = "yes" THEN CODING = 1 ELSE CODING = 0
 40 PRINT "Hello, "; N$; "! Ask me a question. Type EXIT to quit."
@@ -59,19 +59,19 @@
 192 GOTO 50
 
 ' --- HTML BLOCK --- 
-200 IF CODE$ = 1 THEN GOTO 201 
+200 IF CODE$ = 1 THEN GOTO 201 ELSE PRINT "Sadly, You dont have Code Blocks enabled. So no HTML page."
 201 PRINT "Of course i can help you with HTML! luckily,"
 202 PRINT "my creator knows HTML. here, a basic html page for you!"
-203 PRINT "<!-- Simple html page --><!DOCTYPE html>"
-204 PRINT "<html> <!-- This is the html start -->"
-205 PRINT "<body>"
+203 PRINT "<!DOCTYPE html>"
+204 PRINT "<html>"
+205 PRINT "<head>"
 206 PRINT "<title>BASICGPT simple html page!</title>"
-207 PRINT "</body>"
-208 PRINT "<p>Hello, welcome to my page! my name is {YOUR NAME} and i {YOUR HOBBIES}."
-209 PRINT "Nice to meet ya!</p>"
-210 PRINT "Note: BasicGPT made this page. BasicGPT's github is here at"
-211 PRINT "https://github.com/GGoobyJohnbrit/BasicGPT"
-212 PRINT "<a href=""https://www.youtube.com/@YOURCHANNELNAME"">My Channel</a>"
+207 PRINT "</head>"
+208 PRINT "<body>"
+209 PRINT "<p>Hello, welcome to my page! my name is {YOUR NAME} and i {YOUR HOBBIES}."
+210 PRINT "Nice to meet ya!</p>"
+211 PRINT "<a href=""https://www.youtube.com/@YOURCHANNELNAME"">My Channel</a>"
+212 PRINT "</body>"
 213 PRINT "</html>"
 214 IF EMOJI = 1 THEN PRINT "📄💻❗ 😁"
 215 GOTO 50
