@@ -59,20 +59,22 @@
 192 GOTO 50
 
 ' --- HTML BLOCK --- 
-200 PRINT "Of course i can help you with HTML! luckily,"
-201 PRINT "my creator knows HTML. here, a basic html page for you!"
-202 PRINT "<!-- Simple html page --><!DOCTYPE html>"
-203 PRINT "<html> <!-- This is the html start -->"
-204 PRINT "<body>"
-205 PRINT "<title>BASICGPT simple html page!</title>"
-206 PRINT "</body>"
-207 PRINT "<p>Hello, welcome to my page! my name is {YOUR NAME} and i {YOUR HOBBIES}."
-208 PRINT "Nice to meet ya!</p>"
-209 PRINT "Note: BasicGPT made this page. BasicGPT's github is here at"
-210 PRINT "<a href=""https://www.youtube.com/@YOURCHANNELNAME"">My Channel</a>"
-211 PRINT "</html>"
-212 IF EMOJI = 1 THEN PRINT "📄💻❗ 😁"
-213 GOTO 50
+200 IF CODE$ = 1 THEN GOTO 201 
+201 PRINT "Of course i can help you with HTML! luckily,"
+202 PRINT "my creator knows HTML. here, a basic html page for you!"
+203 PRINT "<!-- Simple html page --><!DOCTYPE html>"
+204 PRINT "<html> <!-- This is the html start -->"
+205 PRINT "<body>"
+206 PRINT "<title>BASICGPT simple html page!</title>"
+207 PRINT "</body>"
+208 PRINT "<p>Hello, welcome to my page! my name is {YOUR NAME} and i {YOUR HOBBIES}."
+209 PRINT "Nice to meet ya!</p>"
+210 PRINT "Note: BasicGPT made this page. BasicGPT's github is here at"
+211 PRINT "https://github.com/GGoobyJohnbrit/BasicGPT"
+212 PRINT "<a href=""https://www.youtube.com/@YOURCHANNELNAME"">My Channel</a>"
+213 PRINT "</html>"
+214 IF EMOJI = 1 THEN PRINT "📄💻❗ 😁"
+215 GOTO 50
 ' --- EXIT ---
 220 PRINT "Goodbye, "; N$; "!"
 221 IF EMOJI = 1 THEN PRINT "👋"
